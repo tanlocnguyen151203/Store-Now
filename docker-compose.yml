@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"  # Map cổng 8080 của máy host với cổng 80 của container
+    volumes:
+      - .:/var/www/html  # Sử dụng volume để đồng bộ code giữa máy host và container
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "5.7"
+      MYSQL_DATABASE: instrumentstore
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d  # Mount thư mục chứa file SQL vào container để khởi tạo cơ sở dữ liệu
