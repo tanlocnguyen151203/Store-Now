@@ -44,6 +44,7 @@ CREATE TABLE `cart` (
 INSERT INTO `cart` (`id`, `userId`, `productId`, `qty`, `productName`, `productPrice`, `productImage`) VALUES
 (40, 1, 6, 1, 'Essex EUP-123EA1', '230000000', '4c301f519e.jpg');
 
+<<<<<<< HEAD
 -- --------------------------------------------------------
 
 --
@@ -201,6 +202,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `fullname`, `dob`, `password`, `role_id`, `status`, `address`, `isConfirmed`, `captcha`) VALUES
 (1, 'admin@gmail.com', 'Nguyễn Kha', '2024-01-01', 'e10adc3949ba59abbe56e057f20f883e', 1, 1, '', 1, ''),
 (31, 'kha@gmail.com', 'kha nguyen', '2024-02-06', 'c4ca4238a0b923820dcc509a6f75849b', 2, 1, 'TraVinh', 1, '56661');
+=======
+-- ---------------------------CA', 1, '56661');
+>>>>>>> 956dd7662755a2573bc2a743a5a5690cf9150154
 
 --
 -- Indexes for dumped tables
